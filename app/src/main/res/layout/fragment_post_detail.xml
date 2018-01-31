@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_top"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:id="@+id/post_image"
+                android:adjustViewBounds="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEW"
+                android:background="@drawable/new_post_layout"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/white_100"
+                android:textStyle="bold"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:id="@+id/new_txt"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/edit_delete_layout"
+                android:visibility="gone"
+                >
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="편집"
+                    android:id="@+id/edit_btn"
+                    />
+                <Button
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="삭제"
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/delete_btn"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                >
+
+
+            <!-- Title, date and location - Start -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/black_50"
+                android:orientation="horizontal"
+                android:id="@+id/user_profile_btn"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/poster_img"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="16dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="작성자: "
+                            android:textColor="@color/white_100"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="김준수"
+                            android:id="@+id/poster_name"
+                            android:textColor="@color/white_100"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="레벨: "
+                            android:textColor="@color/white_100"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white_100"
+                            android:id="@+id/poster_level"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:id="@+id/like_layout"
+            android:layout_below="@id/post_top"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="좋아요: "
+                    android:textColor="@color/dark_text"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/likes_txt"
+                    android:textColor="@color/dark_text"
+                    />
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:id="@+id/like_btn"
+                    android:text="좋아요"
+                    android:textColor="@color/dark_text"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_layout"
+            android:orientation="vertical"
+            android:layout_below="@id/like_layout"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            >
+
+
+            <!-- Name - START -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textColor="@color/dark_text"
+                />
+            <!-- Separator line(구분선) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:id="@+id/title_txt"
+                android:background="@drawable/text_bg"
+                android:textColor="@color/dark_text"
+                />
+            <!-- Name - START -->
+
+
+            <!-- Name - START -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="포스트 날짜"
+                android:textColor="@color/dark_text"
+                />
+            <!-- Separator line(구분선) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:gravity="center"
+                android:id="@+id/date_txt"
+                android:background="@drawable/text_bg"
+                android:textColor="@color/dark_text"
+                />
+            <!-- Name - START -->
+
+
+
+
+            <!-- Description - START -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="상세설명"
+                android:textColor="@color/dark_text"
+                />
+            <!-- Separator line(구분선) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/separator" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:background="@drawable/text_bg"
+                android:id="@+id/description_text"
+                android:textColor="@color/dark_text"
+                />
+            <!-- Description - START -->
+
+        </LinearLayout>
+
+
+        <!-- Footer Copyright - Start -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#383838"
+            android:id="@+id/footer_layout"
+            android:layout_below="@+id/content_layout"
+            android:layout_marginTop="16dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#C4C4C4"
+                android:layout_gravity="center"
+                android:text="개발자: 김준수"
+                />
+        </FrameLayout>
+        <!-- Footer Copyright - End -->
+    </RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>

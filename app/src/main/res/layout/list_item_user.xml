@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:svgimageview="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="122dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/margin_container"
+        >
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:id="@+id/rank_layout"
+            android:layout_alignParentLeft="true"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:id="@+id/rank_txt"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"
+                />
+
+
+        </RelativeLayout>
+        <!-- Image -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rank_layout"
+            android:id="@+id/user_image"
+            />
+
+        <!-- Context - Start -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/user_image"
+            android:layout_toEndOf="@+id/user_image"
+            android:layout_marginStart="12dp"
+            android:id="@+id/context"
+            android:layout_centerVertical="true"
+            >
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/user_name"
+                android:text="User Name"
+                android:textStyle="bold"
+                android:includeFontPadding="false"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:id="@+id/user_level_layout"
+                android:layout_below="@id/user_name"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="레벨: "
+                    android:includeFontPadding="false"
+                    />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_name"
+                android:id="@+id/user_level"
+                android:includeFontPadding="false"
+                />
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:layout_below="@id/user_level_layout"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 좋아요: "
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/user_level"
+                    android:id="@+id/user_likes"
+                    android:includeFontPadding="false"
+                    />
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+        <!-- Context - End -->
+    </RelativeLayout>
+    <!-- Separator line(구분선) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/separator"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

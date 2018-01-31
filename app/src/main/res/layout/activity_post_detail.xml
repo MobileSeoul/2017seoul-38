@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:fitsSystemWindows="true"
+    tools:context="com.gmail.jskapplications.seoulpicture.main.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <include layout="@layout/toolbar_back"/>
+
+
+
+        <!-- TabLayout - Start -->
+        <LinearLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/category_txt"
+                    android:background="@drawable/category_post_layout"
+                    android:textColor="@color/white_100"
+                    android:layout_centerInParent="true"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    android:textStyle="bold"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/region_txt"
+                    android:textStyle="bold"
+                    android:background="@drawable/location_post_layout"
+                    android:textColor="@color/white_100"
+                   android:layout_centerInParent="true"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
+                    />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- TabLayout - End -->
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+    </android.support.v4.view.ViewPager>
+
+</android.support.design.widget.CoordinatorLayout>

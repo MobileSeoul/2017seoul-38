@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gmail.jskapplications.seoulpicture.license.LicenseActivityFragment"
+    tools:showIn="@layout/activity_license">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@drawable/text_bg"
+            android:textSize="14sp"
+            android:id="@+id/description_text"
+            android:text="@string/license_string"
+            android:textColor="@color/dark_text" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

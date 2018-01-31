@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:title="내 프로필" />
+
+        <item
+            android:id="@+id/nav_user_list"
+            android:icon="@drawable/ic_menu_best"
+            android:title="베스트 유저" />
+
+        <item
+            android:id="@+id/nav_loc_pic"
+            android:icon="@drawable/ic_menu_location"
+            android:title="지역별 사진 조회" />
+        <item
+            android:id="@+id/nav_culture"
+            android:icon="@drawable/ic_menu_culture"
+            android:title="문화정보" />
+        <item
+            android:id="@+id/nav_air"
+            android:icon="@drawable/ic_menu_pollution"
+            android:title="대기오염" />
+    </group>
+
+    <item android:title="About">
+        <menu>
+            <item
+                android:id="@+id/nav_license"
+                android:icon="@drawable/ic_menu_license"
+                android:title="라이센스" />
+        </menu>
+    </item>
+
+</menu>

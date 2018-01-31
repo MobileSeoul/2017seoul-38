@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:svgimageview="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/layout_round_coners"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/post_image"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:background="@color/new_post"
+        android:text="NEW"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white_100"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:id="@+id/new_txt"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:background="@color/best_post"
+        android:text="BEST"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white_100"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:id="@+id/best_txt"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

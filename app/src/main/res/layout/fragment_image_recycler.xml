@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:svgimageview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_100"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:id="@+id/spinner_layout"
+        >
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/category_spinner"
+            ></Spinner>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:id="@+id/sort_spinner"
+            ></Spinner>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:id="@+id/search_btn"
+            android:background="@drawable/layout_search_coners"
+            android:layout_margin="4dp"
+            android:textColor="@color/white_100"
+            android:text="검색"
+            />
+    </LinearLayout>
+
+<app:android.support.v7.widget.RecyclerView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/image_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/spinner_layout"
+    />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="더 보기 "
+        android:layout_below="@+id/image_recycler_view"
+        android:id="@+id/show_more_btn"
+        android:background="@color/colorPrimary"
+        android:layout_margin="2dp"
+        android:textColor="@color/white_100"
+        />
+
+</RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>

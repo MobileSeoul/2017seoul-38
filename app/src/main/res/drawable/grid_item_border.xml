@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- TODO need to artwork on shadow more accurately -->
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#E0E0E0"/>
+            <corners android:radius="1dp"/>
+            <gradient
+                android:angle="135"
+                android:endColor="#E0E0E0"
+                android:startColor="#D0D0D0" />
+        </shape>
+    </item>
+    <item android:top="1dp" android:left="1dp" android:right="2dp" android:bottom="2dp">
+        <shape
+            android:shape="rectangle">
+            <solid android:color="@color/white_100"/>
+            <corners android:radius="1dp"/>
+
+        </shape>
+    </item>
+</layer-list>

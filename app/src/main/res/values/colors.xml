@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryLight">#68228B</color>
+    <color name="colorPrimary">#68228B</color>
+    <color name="colorPrimaryDark">#4B0082</color>
+    <color name="colorAccent">#4B0082</color>
+
+    <color name="dark_text">#FF000000</color>
+
+    <color name="black_100">#FF000000</color>
+    <color name="black_80">#CC000000</color>
+    <color name="black_70">#B3000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_30">#4D000000</color>
+
+    <color name="white_100">#FFFFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+
+
+    <color name="separator">#D2D2D2</color>
+
+
+    <color name="gold">#D9A441</color>
+    <color name="silver">#A8A8A8</color>
+    <color name="bronze">#965A38</color>
+
+    <color name="gray">#D3D3D3</color>
+    <color name="new_post">#0000FF</color>
+    <color name="best_post">#CD00CD</color>
+</resources>

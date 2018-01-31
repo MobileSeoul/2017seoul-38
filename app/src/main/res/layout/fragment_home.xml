@@ -1,0 +1,395 @@
+<android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <!-- 박물관소식 시작 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <!-- 상단 움직이는 소식 - Start -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <com.gmail.jskapplications.seoulpicture.main.home.NoticeViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    />
+
+
+
+                <!-- Date - Start
+                <TextView
+                    android:id="@+id/banner_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FEB, 2016"
+                    android:layout_marginRight="@dimen/size_16dp"
+                    android:layout_marginTop="@dimen/size_16dp"
+                    android:textColor="@color/white_100"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/font_size_m"
+                    android:layout_alignParentRight="true"
+                    android:includeFontPadding="false"
+                    android:shadowColor="#FF464646"
+                    android:shadowDx="5.0"
+                    android:shadowDy="5.0"
+                    android:shadowRadius="5.0"
+                    />
+
+                <TextView
+                    android:id="@+id/banner_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="28"
+                    android:layout_marginRight="@dimen/size_16dp"
+                    android:textColor="@color/white_100"
+                    android:textStyle="bold"
+                    android:textSize="40sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/banner_date"
+                    android:includeFontPadding="false"
+
+                    android:shadowColor="#FF464646"
+                    android:shadowDx="5.0"
+                    android:shadowDy="5.0"
+                    android:shadowRadius="5.0"
+                    />
+                Date - End -->
+
+                <!-- 검은색 텍스트 소식 - End -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black_50"
+                    android:orientation="vertical"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/exhibition_text"
+                    android:gravity="center_vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/title_layout"
+                        android:layout_centerHorizontal="true"
+                        >
+
+                        <!-- First Line - Start -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="제목: "
+                            android:textColor="@color/white_100"
+                            />
+                        <!-- First Line - End -->
+
+                        <!-- Second Line - Start -->
+                        <TextView
+                            android:id="@+id/best_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="제목 텍스트"
+                            android:textColor="@color/white_100"
+                            />
+                        <!-- Second Line - End -->
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:id="@+id/user_profile_btn"
+                        android:layout_below="@+id/title_layout"
+                        android:gravity="center_vertical"
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/poster_img"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:scaleType="centerCrop"
+                            android:layout_centerVertical="true"
+
+                            android:layout_marginLeft="16dp"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="16dp"
+                            android:layout_toRightOf="@+id/poster_img"
+                            android:id="@+id/name_level"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="작성자: "
+                                    android:textColor="@color/white_100"
+
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/poster_name"
+                                    android:textColor="@color/white_100"
+
+                                    />
+
+                            </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="레벨: "
+                                android:textColor="@color/white_100"
+
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white_100"
+                                android:id="@+id/poster_level"
+
+                                />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!-- 검은색 텍스트 소식 - Start -->
+            </RelativeLayout>
+            <!-- 상단 움직이는 소식 - End -->
+
+            </LinearLayout>
+            <!-- 박물관소식 끝 -->
+            <!-- 소식 위치 표시 배너 - End -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="17dp"
+                android:layout_marginTop="17dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon_banner_1"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:src="@color/black_30" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon_banner_2"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="8dp"
+
+                    android:src="@color/black_30" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/icon_banner_3"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_marginLeft="8dp"
+
+                    android:src="@color/black_30" />
+            </LinearLayout>
+            <!-- 소식 위치 표시 배너 - End -->
+
+            <!-- BEST PICTURES - START -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_100"
+                    android:text="베스트 사진"/>
+                <!-- Separator line(구분선) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/best_posts_container"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    />
+
+            </LinearLayout>
+            <!-- BEST PICTURES - END -->
+
+            <!-- NEW PICTURES - START -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_100"
+                    android:text="최근 사진"/>
+                <!-- Separator line(구분선) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/new_posts_container"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+
+                    />
+
+            </LinearLayout>
+            <!-- NEW PICTURES - END -->
+
+            <!-- NEW PICTURES - START -->
+            <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black_100"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="어디서 찍을까?"/>
+
+                <kr.go.seoul.culturalevents.CulturalEventTypeMini
+                    android:id="@+id/type_mini_culture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+            -->
+            <!-- NEW PICTURES - END -->
+
+            <!-- NEW PICTURES - START -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black_100"
+                    android:text="오늘 찍으러 나갈까요?"/>
+                <!-- Separator line(구분선) -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginLeft="16dp"
+                    />
+
+                <kr.go.seoul.airquality.AirQualityTypeMini
+                    android:id="@+id/type_mini_air"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+            <!-- NEW PICTURES - END -->
+            <!-- Footer Copyright - Start -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#383838"
+                android:id="@+id/footer_layout"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#C4C4C4"
+                    android:layout_gravity="center"
+                    android:text="개발자: 김준수"
+                    />
+            </FrameLayout>
+            <!-- Footer Copyright - End -->
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>

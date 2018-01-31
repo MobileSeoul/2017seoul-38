@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<RelativeLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_upload"
+        android:id="@+id/post_image"
+        android:adjustViewBounds="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/post_image"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        >
+
+        <!-- Name - START -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="제목"
+            android:textColor="@color/dark_text"
+            android:layout_marginTop="8dp"
+            />
+        <!-- Separator line(구분선) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/separator" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:id="@+id/name_edit_text"
+            android:textSize="14sp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@drawable/text_bg"
+            android:hint="제목 입력 (20자 이내)"
+            />
+        <!-- Name - START -->
+
+
+        <!-- Category - START -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카테고리 선택"
+            android:textColor="@color/dark_text"
+            android:layout_marginTop="8dp"
+            />
+
+
+        <!-- Separator line(구분선) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/separator" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:id="@+id/category_spinner"
+            />
+        <!-- Category - START -->
+
+        <!-- Location - START -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="지역 선택"
+            android:textColor="@color/dark_text"
+            android:layout_marginTop="8dp"
+            />
+        <!-- Separator line(구분선) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/separator" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+            android:id="@+id/location_spinner"
+            />
+
+        <!-- Location - START -->
+
+        <!-- Description - START -->
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="상세설명"
+            android:textColor="@color/dark_text"
+            android:layout_marginTop="8dp"
+            />
+        <!-- Separator line(구분선) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/separator" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:background="@drawable/text_bg"
+            android:id="@+id/description_edit_text"
+            android:textSize="14sp"
+            android:maxLength="100"
+            android:hint="상세설명 입력 (50자 이내)"
+            />
+        <!-- Description - START -->
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            >
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="포스트 쓰기"
+                android:textStyle="bold"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:textColor="@color/white_100"
+                android:id="@+id/post_button"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="편집"
+                android:textStyle="bold"
+                android:textColor="@color/white_100"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:id="@+id/edit_button"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
+
+</android.support.v4.widget.NestedScrollView>
